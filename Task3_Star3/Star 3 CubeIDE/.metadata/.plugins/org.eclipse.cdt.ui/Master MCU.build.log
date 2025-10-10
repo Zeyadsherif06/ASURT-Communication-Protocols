@@ -1,0 +1,20 @@
+15:16:28 **** Incremental Build of configuration Debug for project Master MCU ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Master MCU.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Racing team\ASURT Task 3\Star 3\Task3_Star3\Star 3 CubeIDE\Master MCU\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Master MCU.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Master MCU.elf
+ 
+arm-none-eabi-size  Master\ MCU.elf 
+arm-none-eabi-objdump -h -S Master\ MCU.elf  > "Master MCU.list"
+arm-none-eabi-objcopy  -O ihex Master\ MCU.elf  "Master MCU.hex"
+   text	   data	    bss	    dec	    hex	filename
+  25012	    468	   2420	  27900	   6cfc	Master MCU.elf
+Finished building: default.size.stdout
+ 
+Finished building: Master MCU.hex
+Finished building: Master MCU.list
+ 
+ 
+
+15:16:31 Build Finished. 0 errors, 0 warnings. (took 2s.450ms)
+

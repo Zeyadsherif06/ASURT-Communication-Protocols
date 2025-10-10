@@ -1,0 +1,10 @@
+15:16:26 **** Incremental Build of configuration Debug for project Analog Slave MCU ****
+make -j8 all 
+arm-none-eabi-size  Analog\ Slave\ MCU.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9820	     12	   1756	  11588	   2d44	Analog Slave MCU.elf
+Finished building: default.size.stdout
+ 
+
+15:16:27 Build Finished. 0 errors, 0 warnings. (took 1s.102ms)
+
